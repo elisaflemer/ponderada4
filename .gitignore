@@ -1,0 +1,5 @@
+env/Include 
+env/Lib
+env/Scripts
+env/pyvenv.cfg
+backend/node_modules
