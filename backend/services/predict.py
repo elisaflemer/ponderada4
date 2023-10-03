@@ -1,9 +1,9 @@
 import pandas as pd
-from pycaret.classification import load_model
 import json
+import pickle
 
-# Load the saved PyCaret model
-model = load_model('services/model')
+model = pickle.load(open('services/model', 'rb'))
+
 
 with open('services/input.json', 'r') as json_file:
     data = json.load(json_file)
