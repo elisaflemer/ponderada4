@@ -1295,3 +1295,69 @@ Feature names seen at fit time, yet now missing:
 
   warnings.warn(message, FutureWarning)
 
+2023-10-02 22:03:41,062:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:03:41,064:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:03:41,064:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:03:41,064:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:03:46,234:INFO:Initializing load_model()
+2023-10-02 22:03:46,234:INFO:load_model(model_name=services/model, platform=None, authentication=None, verbose=True)
+2023-10-02 22:03:46,249:WARNING:C:\Users\Inteli\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sklearn\base.py:329: UserWarning: Trying to unpickle estimator LogisticRegression from version 1.2.2 when using version 1.1.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+2023-10-02 22:03:46,268:WARNING:C:\Users\Inteli\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sklearn\base.py:493: FutureWarning: The feature names should match those that were passed during fit. Starting version 1.2, an error will be raised.
+Feature names unseen at fit time:
+- hba1c_level
+Feature names seen at fit time, yet now missing:
+- HbA1c_level
+
+  warnings.warn(message, FutureWarning)
+
+2023-10-02 22:04:09,898:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:09,899:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:09,900:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:09,900:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:13,780:INFO:Initializing load_model()
+2023-10-02 22:04:13,780:INFO:load_model(model_name=services/model, platform=None, authentication=None, verbose=True)
+2023-10-02 22:04:13,785:WARNING:C:\Users\Inteli\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sklearn\base.py:329: UserWarning: Trying to unpickle estimator LogisticRegression from version 1.2.2 when using version 1.1.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+2023-10-02 22:04:13,788:WARNING:C:\Users\Inteli\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sklearn\base.py:493: FutureWarning: The feature names should match those that were passed during fit. Starting version 1.2, an error will be raised.
+Feature names unseen at fit time:
+- hba1c_level
+Feature names seen at fit time, yet now missing:
+- HbA1c_level
+
+  warnings.warn(message, FutureWarning)
+
+2023-10-02 22:04:49,129:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:49,130:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:49,130:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:49,130:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-10-02 22:04:51,324:INFO:Initializing load_model()
+2023-10-02 22:04:51,324:INFO:load_model(model_name=services/model, platform=None, authentication=None, verbose=True)
+2023-10-02 22:04:51,327:WARNING:C:\Users\Inteli\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sklearn\base.py:329: UserWarning: Trying to unpickle estimator LogisticRegression from version 1.2.2 when using version 1.1.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+2023-10-02 22:04:51,329:WARNING:C:\Users\Inteli\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sklearn\base.py:493: FutureWarning: The feature names should match those that were passed during fit. Starting version 1.2, an error will be raised.
+Feature names unseen at fit time:
+- hba1c_level
+Feature names seen at fit time, yet now missing:
+- HbA1c_level
+
+  warnings.warn(message, FutureWarning)
+

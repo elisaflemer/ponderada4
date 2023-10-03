@@ -3,3 +3,4 @@ env/Lib
 env/Scripts
 env/pyvenv.cfg
 backend/node_modules
+backend/.env

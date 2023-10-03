@@ -1,10 +1,9 @@
 import streamlit as st
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import requests
-import plotly.express as px
+
 
 # Function to make predictions using the server API
 def get_diabetes_prediction(age, hypertension, heart_disease, bmi, hba1c_level, blood_glucose_level, gender):
@@ -25,7 +24,7 @@ def get_diabetes_prediction(age, hypertension, heart_disease, bmi, hba1c_level, 
     # Include the JWT token in the request headers
     headers = {"Authorization": f"Bearer {jwt_token}"}
 
-    response = requests.post("http://192.168.0.25:5000/api/predict", json=data, headers=headers)
+    response = requests.post("http://44.218.232.113:5000/api/predict", json=data, headers=headers)
     response_json = response.json()
     print(response_json)
     print(response.status_code)
@@ -46,7 +45,7 @@ def login_page():
 
     if login_button:
         # Send a request to the authentication server to obtain the JWT token
-        response = requests.post("http://192.168.0.25:5000/api/users/login", json={"email": email, "password": password})
+        response = requests.post("http://44.218.232.113:5000/api/users/login", json={"email": email, "password": password})
 
         if response.status_code == 200:
             # Store the JWT token in Streamlit secrets
@@ -57,6 +56,26 @@ def login_page():
             st.rerun()
         else:
             st.error("Login failed. Please try again.")
+
+    st.title("Create new user")
+    username = st.text_input("register_username")
+    email = st.text_input("register_email")
+    password = st.text_input("register_password", type="password")
+    confirm_password = st.text_input("confirm_password", type="password")
+    register_button = st.button("Register")
+
+    if register_button:
+        if password != confirm_password:
+            st.error("Passwords do not match. Please try again.")
+        else:
+            # Send a request to the server to register the user
+            response = requests.post("http://44.218.232.113:5000/api/users/", json={"email": email, "password": password, "name": username})
+
+            if response.status_code == 201:
+                st.success("Registration successful! You can now log in.")
+                st.rerun()
+            else:
+                st.error("Registration failed. Please try again.")
 
 # Check if the user is logged in
 if "logged_in" not in st.session_state:
