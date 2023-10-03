@@ -24,6 +24,8 @@ Para deployar tudo na AWS, foram criadas duas EC2 em Ubuntu. O acesso a elas foi
 
 Para que as rotas de predição fossem protegidas, foi criado um subprocesso de Python dentro do Node, que executa o script predict.py quando a rota /api/predict é acessada com um JWT válido. Já para a visualização de dados, como o dataset é público, ele foi disponibilizado diretamente no frontendp para consumo do Streamlit.
 
+Um vídeo do funcionamento completo está disponível na pasta raiz.
+
 ## Como executar localmente
 Em dois terminais distintos, rode:
 
