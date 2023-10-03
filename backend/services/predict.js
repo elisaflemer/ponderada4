@@ -6,6 +6,7 @@ const execPromise = util.promisify(exec);
 
 const predict = async (data) => {
   fs.writeFileSync("services/input.json", JSON.stringify(data));
+  console.log(data)
 
   try {
     console.log('oi')
