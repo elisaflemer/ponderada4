@@ -8,7 +8,7 @@ Assim, o repositório é dividido em três partes:
 2. Backend, contendo o servidor em Node.js, API e lógica de autenticação, com conexão com banco de dados não relacional, hospedado no Atlas MongoDB. Foi escolhido o MongoDB pela facilidade de conexão e free tier sem necessidade de cartão de crédito. Já o Node foi escolhido pela maior familiaridade com a estrutura MVC nesse formato.
 3. Frontend, contendo interface de login, predição e visualização de dados em Streamlit. Essa biblioteca foi escolhida pela construção mais rápida de interface juntamente da possibilidade de se implementar gráficos diretamente com pandas e matplotlib.
 
-O modelo em si se trata de um classificador de diabetes com base em sexo, IMC, idade, Hba1c, glicose no sangue, doença cardíaca e hipertensão. Ele foi treinado a partir de um dataset do Kaggle () com modelos de classificação como regressão logísitica, Naive Bayes, Random Forest e Extra Trees. O modelo foi salvo como um pickle e implementado no backend.
+O modelo em si se trata de um classificador de diabetes com base em sexo, IMC, idade, Hba1c, glicose no sangue, doença cardíaca e hipertensão. Ele foi treinado a partir de um dataset do Kaggle (https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset/) com modelos de classificação como regressão logísitica, Naive Bayes, Random Forest e Extra Trees. O modelo foi salvo como um pickle e implementado no backend.
 
 No frontend, é possível fazer login, criar um novo usuário, fazer requisições de predição e visualizar alguns gráficos provenientes do dataset original.
 
@@ -19,6 +19,10 @@ https://hub.docker.com/repository/docker/elisaflemer/p4front
 Para conectar com o banco não relacional, foi necessário criar um Cluster no Atlas e utilizar a biblioteca 'mongoose' no arquivo backend/config/db.js. Foi utilizada a URI de conexão juntamente do usuário e senha da conta. Após o deploy na nuvem, foi necessário adicionar o IP da máquina virtual na lista de whitelist.
 
 Para deployar tudo na AWS, foram criadas duas EC2 em Ubuntu. O acesso a elas foi configurado como público, a partir de todos os endereços http e https. Foram ainda criados IP elásticos para cada uma delas e os grupos de segurança foram atualizados para expor as portas necessárias (8501 e 5000). Em cada uma delas, foi instalado o Docker. Depois, foi feito o download das imagens a partir do Dockerhub para posterior execução.
+
+## Funcionamento da predição
+
+Para que as rotas de predição fossem protegidas, foi criado um subprocesso de Python dentro do Node, que executa o script predict.py quando a rota /api/predict é acessada com um JWT válido. Já para a visualização de dados, como o dataset é público, ele foi disponibilizado diretamente no frontendp para consumo do Streamlit.
 
 ## Como executar localmente
 Em dois terminais distintos, rode:

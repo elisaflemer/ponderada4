@@ -8,7 +8,6 @@ model = load_model('services/model')
 with open('services/input.json', 'r') as json_file:
     data = json.load(json_file)
 
-
 df = pd.DataFrame([data])
 
 predictions = model.predict(df)

@@ -4,7 +4,6 @@ import seaborn as sns
 import pandas as pd
 import requests
 
-
 # Function to make predictions using the server API
 def get_diabetes_prediction(age, hypertension, heart_disease, bmi, hba1c_level, blood_glucose_level, gender):
     # Extract JWT token from the secrets store
