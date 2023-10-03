@@ -14,7 +14,7 @@ def get_diabetes_prediction(age, hypertension, heart_disease, bmi, hba1c_level, 
         "hypertension": int(hypertension),
         "heart_disease": int(heart_disease),
         "bmi": int(bmi),
-        "hba1c_level": int(hba1c_level),
+        "HbA1c_level": int(hba1c_level),
         "blood_glucose_level": int(blood_glucose_level),
         "gender_Female": int(gender == 'Female'),
         "gender_Male": int(gender == 'Male')
