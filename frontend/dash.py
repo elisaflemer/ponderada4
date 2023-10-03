@@ -93,13 +93,13 @@ if st.session_state.logged_in:
         hypertension = st.checkbox("Hypertension")
         heart_disease = st.checkbox("Heart Disease")
         bmi = st.number_input("BMI")
-        hba1c_level = st.number_input("HbA1c Level")
+        HbA1c_level = st.number_input("HbA1c Level")
         blood_glucose_level = st.number_input("Blood Glucose Level")
         gender = st.radio("Gender", ["Female", "Male"])
 
         if st.button("Predict"):
             # Make a prediction request to the server
-            prediction = get_diabetes_prediction(age, hypertension, heart_disease, bmi, hba1c_level, blood_glucose_level, gender)
+            prediction = get_diabetes_prediction(age, hypertension, heart_disease, bmi, HbA1c_level, blood_glucose_level, gender)
 
             if prediction is not None:
                 if prediction["prediction"] == '1':
