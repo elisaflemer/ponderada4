@@ -1,12 +1,7 @@
-const { validationResult } = require('express-validator')
 const userServices = require('../services/users')
 
 const registerUser = async (req, res, next) => {
     try {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return next(errors.array()[0])
-        }
         const registeredUser = await userServices.registerUser(req.body)
         return res.status(201).json({ registeredUser: registeredUser })
     } catch (err) {
