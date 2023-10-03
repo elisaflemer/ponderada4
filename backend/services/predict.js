@@ -10,7 +10,7 @@ const predict = async (data) => {
   try {
     console.log('oi')
     // Execute a Python script to make predictions using a promise
-    const { stdout, stderr } = await execPromise("python services/predict.py");
+    const { stdout, stderr } = await execPromise("python3 services/predict.py");
     
     // Read and send back the prediction results
     const predictions = fs.readFileSync("services/output.txt", "utf-8");
