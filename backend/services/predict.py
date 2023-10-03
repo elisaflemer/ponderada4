@@ -2,8 +2,7 @@ import pandas as pd
 import json
 import pickle
 
-model = pickle.load(open('services/model', 'rb'))
-
+model = pickle.load(open('./model', 'rb'))
 
 with open('services/input.json', 'r') as json_file:
     data = json.load(json_file)
